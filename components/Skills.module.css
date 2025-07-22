@@ -1,0 +1,72 @@
+.container {
+    width: 900px;
+    /* 3 gambar x 210px */
+    overflow: hidden;
+    mask-image: linear-gradient(to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+    -webkit-mask-image: linear-gradient(to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 350px;
+    }
+}
+
+.gallery_left {
+    display: flex;
+    width: max-content;
+    animation: scroll_left 40s linear infinite;
+}
+
+.gallery_right {
+    display: flex;
+    width: max-content;
+    animation: scroll_right 20s linear infinite;
+}
+
+.gallery .item {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.gallery .item img {
+    height: 1em;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+@keyframes scroll_left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll_right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
