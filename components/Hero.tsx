@@ -30,7 +30,7 @@ const HeroSection = () => {
         </h2>
         <p className="text-gray-700 dark:text-white text-lg">
           {lang === "id"
-            ? "Saya adalah seorang Web Developer yang fokus pada teknologi web modern dan pengembangan UI/UX. Saya antusias menciptakan pengalaman web yang luar biasa dengan membangun aplikasi yang efisien, skalabel, serta solusi digital yang fungsional dan berorientasi pada kebutuhan pengguna."
+            ? "Saya adalah mahasiswa yang sedang mendalami pengembangan web modern dan desain UI/UX. Saat ini saya fokus belajar membangun antarmuka yang responsif dan pengalaman pengguna yang baik, serta antusias mengembangkan aplikasi web yang efisien, skalabel, dan fungsional."
             : "I am a university student currently learning modern web development and UI/UX design. I’m passionate about creating responsive interfaces and improving user experiences, while building efficient, scalable, and functional web applications."}
         </p>
         {/* ...lanjutkan seperti biasa */}
