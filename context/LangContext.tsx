@@ -1,10 +1,10 @@
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
-import { Lang, translations } from "@/utils/i18n";
+
+type Lang = "en" | "id";
 
 interface LangContextType {
   lang: Lang;
-  t: (typeof translations)["id"];
   toggleLang: () => void;
 }
 
@@ -26,10 +26,8 @@ export const LangProvider = ({ children }: { children: React.ReactNode }) => {
     localStorage.setItem("lang", newLang);
   };
 
-  const t = translations[lang];
-
   return (
-    <LangContext.Provider value={{ lang, t, toggleLang }}>
+    <LangContext.Provider value={{ lang, toggleLang }}>
       {children}
     </LangContext.Provider>
   );

@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-  const { lang, t, toggleLang } = useLang();
+  const { lang, toggleLang } = useLang();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDarkMode = () => {
@@ -69,53 +69,53 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
-          {t.welcome}
+          {lang === "id" ? "Selamat Datang" : "Welcome"}
         </Link>
         <Link
           href="/about"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
-          {t.about}
+          {lang === "id" ? "Tentang" : "About"}
         </Link>
         <Link
           href="/skills"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
-          {t.skills}
+          {lang === "id" ? "Keahlian" : "Skills"}
         </Link>
         <Link
           href="/projects"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
-          {t.projects}
+          {lang === "id" ? "Proyek" : "Projects"}
         </Link>
         <Link
           href="/services"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
-          {t.services}
+          {lang === "id" ? "Layanan" : "Services"}
         </Link>
         <Link
           href="/contact"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
-          {t.contact}
+          {lang === "id" ? "Kontak" : "Contact"}
         </Link>
       </div>
       {/* Desktop Menu */}
       <div className="font-bold text-lg ">RFR Portfolio</div>
       <div className="space-x-10 hidden md:flex">
-        <Link href="/">{t.welcome}</Link>
-        <Link href="/about">{t.about}</Link>
-        <Link href="/skills">{t.skills}</Link>
-        <Link href="/projects">{t.projects}</Link>
-        <Link href="/services">{t.services}</Link>
-        <Link href="/contact">{t.contact}</Link>
+        <Link href="/">{lang === "id" ? "Selamat Datang" : "Welcome"}</Link>
+        <Link href="/about">{lang === "id" ? "Tentang" : "About"}</Link>
+        <Link href="/skills">{lang === "id" ? "Keahlian" : "Skills"}</Link>
+        <Link href="/projects">{lang === "id" ? "Proyek" : "Projects"}</Link>
+        <Link href="/services">{lang === "id" ? "Layanan" : "Services"}</Link>
+        <Link href="/contact">{lang === "id" ? "Kontak" : "Contact"}</Link>
       </div>
       <div className="flex gap-2">
         <button onClick={toggleDarkMode}>{darkMode ? "🌙" : "☀️"}</button>
