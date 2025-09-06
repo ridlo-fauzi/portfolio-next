@@ -7,7 +7,10 @@ import { useLang } from "@/context/LangContext";
 const Skills = () => {
   const { lang } = useLang();
   return (
-    <section className="min-h-screen pt-24 bg-gray-100 dark:bg-gray-800  px-6 flex flex-col items-center">
+    <section
+      id="skills"
+      className="min-h-screen pt-24 bg-gray-100 dark:bg-gray-800  px-6 flex flex-col items-center"
+    >
       <h1 className="text-2xl md:text-4xl font-bold mb-5 text-gray-900 dark:text-white   ">
         {lang === "id" ? "Keahlian Saya" : "My Skills"}
       </h1>

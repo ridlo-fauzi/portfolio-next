@@ -6,7 +6,10 @@ import { useLang } from "@/context/LangContext";
 const About = () => {
   const { lang } = useLang();
   return (
-    <section className="min-h-screen py-10 flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-800  px-6">
+    <section
+      id="about"
+      className="min-h-screen py-10 flex flex-col justify-center items-center bg-gray-100 dark:bg-gray-800  px-6"
+    >
       <div className="max-w-6xl my-10 w-full flex flex-col md:flex-row items-center md:items-start gap-10">
         {/* Gambar Kiri */}
         <div className="w-full flex justify-center md:w-1/3 mt-10 ">
@@ -29,18 +32,18 @@ const About = () => {
           <div className="flex flex-col space-y-5 text-center md:text-left text-base">
             <p>
               {lang === "id"
-                ? "Ketertarikan saya pada pemrograman dimulai sejak SMK. Awalnya hanya iseng mencoba membuat halaman web sederhana dengan HTML dan CSS, lalu jadi tertarik pada cara kerja aplikasi secara keseluruhan."
-                : "My interest in programming began during my time in vocational high school (SMK). It started with a simple curiosity when I tried creating a basic web page using HTML and CSS. Since then, I've been fascinated by how applications work — from the user interface to the functionality behind the scenes."}
+                ? "Ketertarikan saya pada pemrograman dimulai saat SMK, ketika mencoba membuat halaman web dengan HTML dan CSS. Sejak itu, saya tertarik mempelajari cara kerja aplikasi."
+                : "I became interested in programming in vocational school after trying to build a simple web page with HTML and CSS. Since then, I've been curious about how applications work."}
             </p>
             <p>
               {lang === "id"
-                ? "Saat kuliah, saya mendalami pemrograman web dan mobile. Saya mengenal berbagai teknologi seperti JavaScript, React, PHP, Flutter, dan Laravel. Saya tidak hanya membangun aplikasi, tetapi juga tertarik bagaimana teknologi menyelesaikan masalah nyata."
-                : "During college, I deepened my knowledge of programming, especially in web and mobile development. I became familiar with various technologies such as JavaScript, React, PHP, Flutter, and Laravel. My passion goes beyond just building apps — I'm driven by how technology can be used to solve real-world problems."}
+                ? "Saat kuliah, saya fokus pada pengembangan web dan mobile. Saya menggunakan teknologi seperti JavaScript, React, PHP, Flutter, dan Laravel, dengan minat pada solusi teknologi untuk masalah nyata."
+                : "In college, I focused on web and mobile development using technologies like JavaScript, React, PHP, Flutter, and Laravel. I'm especially interested in how tech solves real-world problems."}
             </p>
             <p>
               {lang === "id"
-                ? "Bagi saya, pemrograman bukan sekadar menulis kode, tapi menciptakan solusi yang bermakna. Dengan semangat belajar yang tinggi, saya terus mengasah kemampuan dan menghadapi tantangan baru di dunia teknologi."
-                : "I believe programming is not just about writing code, but about creating meaningful solutions. With a strong willingness to learn, I continue to sharpen my skills and embrace new challenges in the tech world."}
+                ? "Bagi saya, pemrograman adalah cara untuk menyelesaikan masalah. Saya masih terus belajar dan mencoba hal baru di dunia teknologi."
+                : "For me, programming is a way to solve problems. I'm still learning and trying new things in tech."}
             </p>
           </div>
         </div>
@@ -50,44 +53,6 @@ const About = () => {
         <h1 className="text-2xl md:text-4xl font-extrabold text-gray-900 dark:text-white  text-center">
           {lang === "id" ? "Pendidikan Saya" : "My Education"}
         </h1>
-        {/* Kampus */}
-        <div className="flex flex-col md:flex-row items-center t gap-10">
-          <div className="md:px-4 w-full md:w-2/3 text-gray-700 dark:text-white text-base leading-relaxed">
-            <h2 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white text-center md:text-left">
-              {lang === "id"
-                ? "Universitas Duta Bangsa Surakarta"
-                : "Duta Bangsa University Of Surakarta"}
-            </h2>
-            <p className="p-4 italic">
-              {lang === "id"
-                ? "S1 Teknik Informatika"
-                : "Bachelor of Computer Science"}
-              S1 Teknik Informatika
-              <br />
-              2022 - {lang === "id" ? "Sekarang" : "Now"}
-            </p>
-            {/* Pengalaman Kampus */}
-            <div className="px-4 pb-4">
-              <p className="text-justify text-base md:text-lg">
-                {lang === "id"
-                  ? "Selama kuliah di Universitas Duta Bangsa Surakarta, saya mendalami Teknik Informatika dan memperluas pengetahuan di bidang pemrograman web, Python, mobile, IoT, dan sistem cerdas. Saya juga mengembangkan beberapa game edukasi sederhana sebagai bagian dari proyek pembelajaran."
-                  : "During my studies at Universitas Duta Bangsa Surakarta, I deepened my knowledge in Informatics Engineering and expanded my skills in web programming, Python, mobile development, IoT, and intelligent systems. I also developed several simple educational games as part of learning projects."}
-              </p>
-            </div>
-          </div>
-
-          <div className="w-full flex justify-center md:w-1/3">
-            <div className="w-[350px] h-[262px] md:w-[400px] md:h-[300px] overflow-hidden shadow-xl rounded-2xl hover:scale-105 transition-transform duration-300 border border-gray-300 dark:border-gray-700">
-              <Image
-                src="/image/1748789878765.jpg"
-                alt="Foto Kampus"
-                width={1080}
-                height={802}
-                className="object-cover object-center w-full h-full"
-              />
-            </div>
-          </div>
-        </div>
 
         {/* SMK */}
         <div className="flex flex-col mt-10 md:flex-row items-center gap-10">
@@ -122,6 +87,44 @@ const About = () => {
                 width={1080}
                 height={802}
                 className="object-cover object-bottom w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+        {/* Kampus */}
+        <div className="flex flex-col md:flex-row items-center gap-10">
+          <div className="md:px-4 w-full md:w-2/3 text-gray-700 dark:text-white text-base leading-relaxed">
+            <h2 className="text-lg md:text-2xl font-bold text-gray-900 dark:text-white text-center md:text-left">
+              {lang === "id"
+                ? "Universitas Duta Bangsa Surakarta"
+                : "Duta Bangsa University Of Surakarta"}
+            </h2>
+            <p className="p-4 italic">
+              {lang === "id"
+                ? "S1 Teknik Informatika"
+                : "Bachelor of Computer Science"}
+              S1 Teknik Informatika
+              <br />
+              2022 - {lang === "id" ? "Sekarang" : "Now"}
+            </p>
+            {/* Pengalaman Kampus */}
+            <div className="px-4 pb-4">
+              <p className="text-justify text-base md:text-lg">
+                {lang === "id"
+                  ? "Selama kuliah di Universitas Duta Bangsa Surakarta, saya mengambil program studi Teknik Informatika dan mempelajari pemrograman web, Python, mobile, IoT, dan sistem cerdas. Saya juga mengembangkan beberapa game edukasi sederhana sebagai bagian dari proyek pembelajaran."
+                  : "During my studies at Universitas Duta Bangsa Surakarta, I majored in Informatics Engineering and learned about web programming, Python, mobile development, IoT, and intelligent systems. I also developed a few simple educational games as part of class projects."}
+              </p>
+            </div>
+          </div>
+
+          <div className="w-full flex justify-center md:w-1/3">
+            <div className="w-[350px] h-[262px] md:w-[400px] md:h-[300px] overflow-hidden shadow-xl rounded-2xl hover:scale-105 transition-transform duration-300 border border-gray-300 dark:border-gray-700">
+              <Image
+                src="/image/1748789878765.jpg"
+                alt="Foto Kampus"
+                width={1080}
+                height={802}
+                className="object-cover object-center w-full h-full"
               />
             </div>
           </div>

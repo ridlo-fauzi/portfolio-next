@@ -1,11 +1,21 @@
 "use client";
-
 import { useLang } from "@/context/LangContext";
+import { useEffect, useState } from "react";
 
-export default function ContactPage() {
+export default function Contact() {
   const { lang } = useLang();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // jangan render sebelum client siap
   return (
-    <div className="relative flex flex-col md:flex-row justify-between items-center overflow-hidden">
+    <div
+      id="contact"
+      className="relative flex flex-col md:flex-row justify-between items-center overflow-hidden"
+    >
       {/* Kiri - Contact Form */}
       <div className="w-full md:w-1/2 p-6 py-28 pb-48 md:pb-0 md:min-h-screen  items-center flex justify-center bg-white dark:bg-gray-900 transition-colors duration-300">
         <form className="flex flex-col gap-4 max-w-md w-full">
@@ -44,7 +54,9 @@ export default function ContactPage() {
         >
           <path
             className="fill-blue-500 dark:fill-blue-900  transition-colors duration-300"
-            d="M0,160L26.7,144C53.3,128,107,96,160,85.3C213.3,75,267,85,320,112C373.3,139,427,181,480,170.7C533.3,160,587,96,640,101.3C693.3,107,747,181,800,218.7C853.3,256,907,256,960,229.3C1013.3,203,1067,149,1120,133.3C1173.3,117,1227,139,1280,138.7C1333.3,139,1387,117,1413,106.7L1440,96L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"
+            fill="#0099ff"
+            fill-opacity="1"
+            d="M0,224L17.1,197.3C34.3,171,69,117,103,96C137.1,75,171,85,206,85.3C240,85,274,75,309,101.3C342.9,128,377,192,411,213.3C445.7,235,480,213,514,192C548.6,171,583,149,617,160C651.4,171,686,213,720,202.7C754.3,192,789,128,823,133.3C857.1,139,891,213,926,213.3C960,213,994,139,1029,122.7C1062.9,107,1097,149,1131,181.3C1165.7,213,1200,235,1234,218.7C1268.6,203,1303,149,1337,149.3C1371.4,149,1406,203,1423,229.3L1440,256L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"
           ></path>
         </svg>
       </div>

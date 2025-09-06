@@ -65,35 +65,35 @@ export default function Navbar() {
                     }`}
       >
         <Link
-          href="/"
+          href="#hero"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
           {lang === "id" ? "Selamat Datang" : "Welcome"}
         </Link>
         <Link
-          href="/about"
+          href="#about"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
           {lang === "id" ? "Tentang" : "About"}
         </Link>
         <Link
-          href="/skills"
+          href="#skills"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
           {lang === "id" ? "Keahlian" : "Skills"}
         </Link>
         <Link
-          href="/projects"
+          href="#projects"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
           {lang === "id" ? "Proyek" : "Projects"}
         </Link>
         <Link
-          href="/services"
+          href="#services"
           onClick={() => setIsOpen(false)}
           className="block mx-20 py-2 text-gray-700 dark:text-white  hover:text-blue-500 transition-colors duration-300"
         >
@@ -110,12 +110,12 @@ export default function Navbar() {
       {/* Desktop Menu */}
       <div className="font-bold text-lg ">RFR Portfolio</div>
       <div className="space-x-10 hidden md:flex">
-        <Link href="/">{lang === "id" ? "Selamat Datang" : "Welcome"}</Link>
-        <Link href="/about">{lang === "id" ? "Tentang" : "About"}</Link>
-        <Link href="/skills">{lang === "id" ? "Keahlian" : "Skills"}</Link>
-        <Link href="/projects">{lang === "id" ? "Proyek" : "Projects"}</Link>
-        <Link href="/services">{lang === "id" ? "Layanan" : "Services"}</Link>
-        <Link href="/contact">{lang === "id" ? "Kontak" : "Contact"}</Link>
+        <Link href="#hero">{lang === "id" ? "Selamat Datang" : "Welcome"}</Link>
+        <Link href="#about">{lang === "id" ? "Tentang" : "About"}</Link>
+        <Link href="#skills">{lang === "id" ? "Keahlian" : "Skills"}</Link>
+        <Link href="#projects">{lang === "id" ? "Proyek" : "Projects"}</Link>
+        <Link href="#services">{lang === "id" ? "Layanan" : "Services"}</Link>
+        <Link href="#contact">{lang === "id" ? "Kontak" : "Contact"}</Link>
       </div>
       <div className="flex gap-2">
         <button onClick={toggleDarkMode}>{darkMode ? "🌙" : "☀️"}</button>
