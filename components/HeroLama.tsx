@@ -1,7 +1,8 @@
 "use client";
 import { useLang } from "@/context/LangContext";
-import Image from "next/image";
+// import Image from "next/image";
 import Typewriter from "typewriter-effect";
+import Lanyard from "@/components/Lanyard";
 
 const HeroSection = () => {
   const { lang } = useLang();
@@ -92,9 +93,9 @@ const HeroSection = () => {
       </div>
 
       {/* Kanan */}
-      <div className="w-full md:w-1/3 mt-10 flex justify-center relative">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -mt-5">
         {/* Gambar di atas blob */}
-        <div className="w-[300px] h-[450px] overflow-hidden shadow-xl rounded-2xl hover:scale-105 transition-transform duration-300 border border-gray-300 dark:border-gray-700 relative z-10">
+        {/* <div className="w-[300px] h-[450px] overflow-hidden shadow-xl rounded-2xl hover:scale-105 transition-transform duration-300 border border-gray-300 dark:border-gray-700 relative z-10">
           <Image
             src="/image/1748789495828.jpg"
             alt="Ridlo Fauzi Rakhmadianto"
@@ -102,7 +103,8 @@ const HeroSection = () => {
             height={450}
             className="object-cover object-bottom w-full h-full"
           />
-        </div>
+        </div> */}
+        <Lanyard position={[0, 0, 13]} gravity={[0, -40, 0]} />
       </div>
     </div>
   );
